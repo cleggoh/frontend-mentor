@@ -26,18 +26,22 @@ function App() {
               <div className="rounded-full w-4 h-4 border-white border-[1px]"></div>
             </div>
 
-            <div className="mt-10">
-              <span>{formatCardNumber(cardNumber)}</span>
+            <div className="mt-6 flex justify-center">
+              <span className="tracking-widest">
+                {formatCardNumber(cardNumber)}
+              </span>
             </div>
             <div className="mt-2 text-xs flex justify-between">
-              <span>{cardholderName}</span>
+              <span className="ml-1">{cardholderName.toUpperCase()}</span>
               <span>
                 {expiryMonth}/{expiryYear}
               </span>
             </div>
           </div>
-          <div className="p-4 left-36 relative text-white h-[150px] w-[280px] rounded-md bg-[url('bg-card-back.png')] bg-cover">
-            <p className="mt-[48px] ml-52">{cvc}</p>
+          <div className="py-[65px] px-[30px] left-36 relative text-white h-[150px] w-[280px] rounded-md bg-[url('bg-card-back.png')] bg-cover">
+            <div className="h-[21px] w-[222px] px-1 flex justify-end items-center">
+              <p>{cvc}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -71,7 +75,7 @@ function App() {
             />
           </div>
           <button type="submit" onClick={() => {}}>
-            Submit
+            Confirm
           </button>
         </form>
         <div className="p-10"></div>
